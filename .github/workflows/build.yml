@@ -9,8 +9,8 @@ jobs:
   build-webpack:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
       - name: Сборка Webpack
@@ -19,7 +19,7 @@ jobs:
           npm ci
           npm run build
       - name: Сохранение артефактов
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: webpack-build
           path: webpack-project/dist
@@ -27,8 +27,8 @@ jobs:
   build-vite:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
       - name: Сборка Vite
@@ -37,7 +37,7 @@ jobs:
           npm ci
           npm run build
       - name: Сохранение артефактов
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: vite-build
           path: vite-project/dist
