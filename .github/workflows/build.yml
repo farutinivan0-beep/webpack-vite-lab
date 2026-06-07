@@ -24,13 +24,13 @@ jobs:
           name: webpack-build
           path: webpack-project/dist
 
-  build-vite:
+build-vite:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
       - name: Сборка Vite
         run: |
           cd vite-project
